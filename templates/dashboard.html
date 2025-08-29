@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CA Dashboard</title>
+</head>
+<body>
+  <h1>Leads Dashboard</h1>
+  <table border="1">
+    <tr><th>Name</th><th>Email</th><th>Mobile</th><th>Action</th></tr>
+    {% for lead in leads %}
+    <tr>
+      <td>{{ lead.name }}</td>
+      <td>{{ lead.email }}</td>
+      <td>{{ lead.mobile }}</td>
+      <td><a href="/lead/{{ lead.id }}">View</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

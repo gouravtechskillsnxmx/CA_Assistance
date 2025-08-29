@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lead Detail</title>
+</head>
+<body>
+  <h1>Chat History for {{ lead.name }}</h1>
+  <p>Email: {{ lead.email }}</p>
+  <p>Mobile: {{ lead.mobile }}</p>
+  <hr>
+  {% for chat in chats %}
+    <p><b>Q:</b> {{ chat.question }}</p>
+    <p><b>A:</b> {{ chat.answer }}</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>
